@@ -1,0 +1,123 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}   
+
+header {
+    background-color: #177ee6;
+    padding: 1rem 2rem;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header .codeKochilogo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+header .nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header .nav-links a:hover {
+    text-decoration: underline;
+}
+
+section.hero {
+    display: flex;
+    flex-direction: column;
+    background-color: #342757;
+    padding: 4rem 2rem;
+    text-align: center;
+    justify-content: center;
+    min-height:60vh;
+}
+
+section.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+section.hero p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+section.main-programmes{
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    margin: 30px 0;
+    background-color: #f1a0a0;
+    align-items: center;
+}
+
+.programmes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 1rem;
+}
+
+.programme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.programme h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.programme p {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.register-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #177ee6;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+   
+}
+
+@media (max-width: 800px) {
+    .programmes-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    section.main-programmes {
+        padding: 3rem 1rem;
+    }
+
+    .programmes-list {
+        grid-template-columns: 1fr;
+    }
+}
