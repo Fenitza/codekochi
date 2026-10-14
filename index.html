@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Site header: navigation links jump to sections on this page. -->
     <header>
-        <nav label="Main Navigation">
+        <nav aria-label="Main Navigation">
             <a href="#" class="codeKochilogo">codeKochi</a>
             <div class="nav-links">
                 <a href="#home">Home</a>
@@ -19,10 +20,12 @@
     </header>
 
     <main>
+        <!-- Introductory banner for the site. -->
         <section id="home" class="hero">
             <h1>Welcome to codeKochi</h1>
             <p>Empowering the next generation of coders in Kochi.</p>
         </section>
+        <!-- Programme cards; each Register Now link points to the form below. -->
         <section id="programmes" class="main-programmes">
             <h2>Our Programmes</h2>
             <p>Learn programming with our hands-on courses.</p>
@@ -30,27 +33,59 @@
                 <div class="programme">
                     <h3>Web Development</h3>
                     <p>Learn to build modern web applications using HTML, CSS, and JavaScript.</p>
-                    <button class="register-button">Register Now</button>
+                    <a class="register-button" href="#register">Register Now</a>
                 </div>
                 <div class="programme">
                     <h3>Data Science</h3>
                     <p>Dive into data analysis, machine learning, and visualization techniques.</p>
-                    <button class="register-button">Register Now</button>
+                    <a class="register-button" href="#register">Register Now</a>
                 </div>
                 <div class="programme">
                     <h3>Mobile App Development</h3>
                     <p>Create mobile applications for Android and iOS platforms.</p>
-                    <button class="register-button">Register Now</button>
+                    <a class="register-button" href="#register">Register Now</a>
                 </div>
             </div>
         </section>
-        <section id="register">
-            <h2>Register</h2>
-            <p>Sign up for our upcoming workshops and events.</p>
+        <!-- Registration form: required fields use built-in browser validation. -->
+        <section id="register" class="register-section">
+            <div class="register-intro">
+                <p class="section-eyebrow">TAKE THE NEXT STEP</p>
+                <h2>Register for a programme</h2>
+                <p>Tell us a little about yourself and choose the programme you are interested in. We’ll be in touch with more details.</p>
+            </div>
+            <form class="register-form" id="register-form">
+                <div class="form-field">
+                    <label for="full-name">Full name</label>
+                    <input type="text" id="full-name" name="fullName" autocomplete="name" required>
+                </div>
+                <div class="form-field">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                    <label for="programme-choice">Programme of interest</label>
+                    <select id="programme-choice" name="programme" required>
+                        <option value="" disabled selected>Select a programme</option>
+                        <option value="web-development">Web Development</option>
+                        <option value="data-science">Data Science</option>
+                        <option value="mobile-app-development">Mobile App Development</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="message">Anything you’d like us to know? <span>(optional)</span></label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button class="register-submit" type="submit">Send registration request</button>
+                <p class="form-note">Demo form: your details are not sent or stored.</p>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
         </section>
     </main>
+    <!-- Site footer. -->
     <footer>
         <p>&copy; 2023 codeKochi. All rights reserved.</p>
     </footer>
+   
 </body>
 </html>
